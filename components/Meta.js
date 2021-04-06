@@ -86,14 +86,8 @@ const Meta = ({ title, keywords, description }) => {
 
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content='Renzo R. Cretecio - Web developer' />
-      <meta
-        name='twitter:description'
-        content="I'm a PH based Web designer and Developer focused on user-friendly interface"
-      />
-      <meta
-        name='twitter:image'
-        content='https://creteciorenzo.netlify.com/assets/img/Logo2.jpg'
-      />
+      <meta name='twitter:description' content={description} />
+
       <meta
         name='twitter:image:alt'
         content='Renzo R. Cretecio - Web developer'
