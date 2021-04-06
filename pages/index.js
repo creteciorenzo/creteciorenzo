@@ -1,65 +1,65 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Project from '../components/ProjectsCard'
+const baseURL = 'https://api.github.com/users/creteciorenzo/repos'
+import {
+  Box,
+  SimpleGrid,
+  Flex,
+  Heading,
+  Text,
+  Link,
+  Button,
+  Center,
+} from '@chakra-ui/react'
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    <>
+      <Box h='100vh'>
+        <Flex
+          margin='0 auto'
+          direction='column'
+          maxW={992}
+          px={[5, 8, 8]}
+          py={5}>
+          <Heading as='h1' fontSize={40} color='grey.light'>
+            {`Hi, I'm Renzo Cretecio.`}
+          </Heading>
+          <Text fontSize='lg' fontWeight='medium' mt={5}>
+            {`I'm a PH based Frontend Developer.`}
+          </Text>
+          <Text fontSize='lg' fontWeight='medium' mt={5}>
+            {`My current toolsets includes Vue.js/Quasar, React.js/Next Framework and all the other various libraries and technologies related to them.`}
+          </Text>
+          <Text fontSize='lg' fontWeight='medium' mt={5}>
+            {` If you want to get in touch or talk about a project, send me a message or send an email to `}
+            <Link
+              color='pastel.custom'
+              href='mailto:renzocretecio@gmail.com?Subject=Hello'
+              target='_top'>
+              renzocretecio@gmail.com
+            </Link>
+          </Text>
+          <Heading as='h2' size='lg' color='slate.lighter' mt={5}>
+            {`Recent Works`}
+          </Heading>
+          <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
+            <Project projects={projects} />
+          </SimpleGrid>
+        </Flex>
+      </Box>
+    </>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch(`${baseURL}?sort=created_at`)
+  const projects = await res.json()
+
+  return {
+    props: {
+      projects,
+    },
+  }
 }
