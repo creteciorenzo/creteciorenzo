@@ -85,13 +85,10 @@ const Meta = ({ title, keywords, description }) => {
       <meta property='og:description' content={description} />
 
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:title' content='Renzo R. Cretecio - Web developer' />
+      <meta name='twitter:title' content={description} />
       <meta name='twitter:description' content={description} />
 
-      <meta
-        name='twitter:image:alt'
-        content='Renzo R. Cretecio - Web developer'
-      />
+      <meta name='twitter:image:alt' content={description} />
       <meta name='twitter:site' content='@rnzous' />
       <meta name='twitter:creator' content='@rnzous' />
       <meta name='fb:page_id' content='323482201948526' />

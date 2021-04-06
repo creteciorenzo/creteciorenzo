@@ -12,7 +12,10 @@ import {
   Link,
   Button,
   Center,
+  IconButton,
 } from '@chakra-ui/react'
+import { IoLogoGithub } from 'react-icons/io'
+
 export default function Home({ projects }) {
   return (
     <>
@@ -43,11 +46,12 @@ export default function Home({ projects }) {
             </Link>
           </Text>
           <Heading as='h2' size='lg' color='slate.lighter' mt={5}>
-            {`Recent Works`}
+            {`See my works below.`}
           </Heading>
           <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
             <Project projects={projects} />
           </SimpleGrid>
+
           <Center mt={5}>
             <Button
               size='lg'
