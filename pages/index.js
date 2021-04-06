@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css'
 import Project from '../components/ProjectsCard'
 import Meta from '../components/Meta'
+import SkeletonLoader from '../components/SkeletonLoader'
+import useSWR from 'swr'
 
 const baseURL = 'https://api.github.com/users/creteciorenzo/repos'
 import {
@@ -16,7 +18,13 @@ import {
 } from '@chakra-ui/react'
 import { IoLogoGithub } from 'react-icons/io'
 
+const fetcher = async () => {
+  const data = await fetch(`${baseURL}`)
+  return data
+}
+
 export default function Home({ projects }) {
+  const { data, error } = useSWR('/users/creteciorenzo/repos', fetcher)
   return (
     <>
       <Meta />
@@ -48,9 +56,20 @@ export default function Home({ projects }) {
           <Heading as='h2' size='lg' color='slate.lighter' mt={5}>
             {`See my works below.`}
           </Heading>
-          <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
-            <Project projects={projects} />
-          </SimpleGrid>
+
+          {error ? (
+            <Text mt={5}>An error occurred. Please refresh.</Text>
+          ) : (
+            <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
+              {projects ? (
+                <Project projects={projects} />
+              ) : (
+                [...Array(4).keys()].map((loaderCard) => (
+                  <SkeletonLoader key={loaderCard} />
+                ))
+              )}
+            </SimpleGrid>
+          )}
 
           <Center mt={5}>
             <Button
@@ -76,7 +95,6 @@ export default function Home({ projects }) {
 export const getStaticProps = async () => {
   const res = await fetch(`${baseURL}?sort=created_at`)
   const projects = await res.json()
-
   return {
     props: {
       projects,
