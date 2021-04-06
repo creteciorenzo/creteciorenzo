@@ -33,6 +33,18 @@ function Projectscard({ projects }) {
                 icon={<IoLogoGithub size={30} />}
                 onClick={() => window.open(`${project.html_url}`, '_blank')}
               />
+              <IconButton
+                variant='link'
+                _hover={{
+                  color: 'pastel.custom',
+                }}
+                _focus={{
+                  borderColor: 'transparent',
+                }}
+                aria-label='Open website'
+                icon={<IoMdOpen size={30} />}
+                onClick={() => window.open(`${project.homepage}`, '_blank')}
+              />
             </Box>
           </Flex>
           <Text color='grey.lighter' fontSize='xl' fontWeight='bold' mt={4}>
