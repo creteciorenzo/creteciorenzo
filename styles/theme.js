@@ -11,9 +11,9 @@ const theme = extendTheme({
   },
   colors: {
     blue: {
-      base: '#283655',
-      light: '#4d648d',
-      lighter: '#d0e1f9',
+      base: '#071330',
+      light: '#0C4160',
+      lighter: '#738FA7',
     },
     grey: {
       base: '#dfe3ee',

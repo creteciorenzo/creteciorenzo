@@ -1,6 +1,7 @@
-import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Project from '../components/ProjectsCard'
+import Meta from '../components/Meta'
+
 const baseURL = 'https://api.github.com/users/creteciorenzo/repos'
 import {
   Box,
@@ -12,10 +13,10 @@ import {
   Button,
   Center,
 } from '@chakra-ui/react'
-
 export default function Home({ projects }) {
   return (
     <>
+      <Meta />
       <Box h='100vh'>
         <Flex
           margin='0 auto'
@@ -47,6 +48,21 @@ export default function Home({ projects }) {
           <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
             <Project projects={projects} />
           </SimpleGrid>
+          <Center mt={5}>
+            <Button
+              size='lg'
+              _hover={{}}
+              _active={{}}
+              _focus={{}}
+              borderColor='pastel.custom'
+              color='pastel.custom'
+              variant='outline'
+              onClick={() =>
+                window.open('https://github.com/creteciorenzo', '_blank')
+              }>
+              More on GitHub
+            </Button>
+          </Center>
         </Flex>
       </Box>
     </>

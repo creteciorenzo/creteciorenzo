@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Box, Text, Flex, Icon, IconButton } from '@chakra-ui/react'
+import Link from 'next/link'
 
 import { IoLogoGithub, IoMdOpen } from 'react-icons/io'
 import { MdFolderOpen } from 'react-icons/md'
+import { AiOutlineStar, AiOutlineFork } from 'react-icons/ai'
 
 function Projectscard({ projects }) {
   return (
@@ -29,7 +31,7 @@ function Projectscard({ projects }) {
                 }}
                 aria-label='Open github link'
                 icon={<IoLogoGithub size={30} />}
-                onClick={() => openLinkInNewTab(project.html_url)}
+                onClick={() => window.open(`${project.html_url}`, '_blank')}
               />
             </Box>
           </Flex>
@@ -41,6 +43,14 @@ function Projectscard({ projects }) {
           </Text>
           <Flex alignItems='center' position='absolute' mt={3} bottom={5}>
             <Text fontWeight='medium'>{project.language}</Text>
+            <Icon as={AiOutlineStar} ml={4} />
+            <Text ml={1} fontWeight='medium'>
+              {project.stargazers_count}
+            </Text>
+            <Icon as={AiOutlineFork} ml={3} />
+            <Text ml={1} fontWeight='medium'>
+              {project.forks_count}
+            </Text>
           </Flex>
         </Box>
       ))}
