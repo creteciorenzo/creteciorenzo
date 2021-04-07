@@ -20,7 +20,7 @@ const theme = extendTheme({
       light: '#f7f7f7',
       lighter: '#ffffff',
     },
-    while: '#fffef9',
+    white: '#fffef9',
     pastel: {
       custom: '#ffaaa5',
     },

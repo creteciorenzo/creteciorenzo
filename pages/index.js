@@ -61,7 +61,7 @@ export default function Home({ projects }) {
             <Text mt={5}>An error occurred. Please refresh.</Text>
           ) : (
             <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
-              {projects ? (
+              {data ? (
                 <Project projects={projects} />
               ) : (
                 [...Array(4).keys()].map((loaderCard) => (
