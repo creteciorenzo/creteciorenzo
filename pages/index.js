@@ -44,26 +44,23 @@ export default function Home({ projects }) {
           <Text fontSize='lg' fontWeight='medium' mt={5}>
             {' '}
             {`My current toolsets includes Vue.js/Quasar, React.js/Next Framework and all the other various libraries and technologies related to them.`}{' '}
-          </Text>{' '}
+          </Text>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
-            {' '}
             {` If you want to get in touch or talk about a project, send me a message or send an email to `}{' '}
             <Link
               color='pastel.custom'
               href='mailto:renzocretecio@gmail.com?Subject=Hello'
               target='_top'>
-              renzocretecio @gmail.com{' '}
-            </Link>{' '}
-          </Text>{' '}
+              renzocretecio @gmail.com
+            </Link>
+          </Text>
           <Heading as='h2' size='lg' color='slate.lighter' mt={5}>
-            {' '}
             {`See my works below.`}{' '}
           </Heading>
           {error ? (
             <Text mt={5}> An error occurred.Please refresh. </Text>
           ) : (
             <SimpleGrid columns={[1, null, 2]} spacing={5} mt={5}>
-              {' '}
               {data ? (
                 <Project projects={projects} />
               ) : (
