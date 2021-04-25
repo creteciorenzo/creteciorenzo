@@ -39,10 +39,9 @@ export default function Home({ projects }) {
           </Heading>{' '}
           <Text fontSize='lg' fontWeight='medium' mt={5}>
             {' '}
-            {`I'm a PH based Frontend Developer.`}{' '}
-          </Text>{' '}
+            {`I'm a PH based Frontend Developer.`}
+          </Text>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
-            {' '}
             {`My current toolsets includes Vue.js/Quasar, React.js/Next Framework and all the other various libraries and technologies related to them.`}{' '}
           </Text>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
