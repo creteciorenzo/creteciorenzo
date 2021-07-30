@@ -34,18 +34,16 @@ export default function Home({ projects }) {
           px={[5, 8, 8]}
           py={5}>
           <Heading as='h1' fontSize={40} color='grey.light'>
-            {' '}
-            {`Hi, I'm Renzo Cretecio.`}{' '}
-          </Heading>{' '}
+            {`Hi, I'm Renzo Cretecio.`}
+          </Heading>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
-            {' '}
             {`I'm a PH based Frontend Developer.`}
           </Text>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
-            {`My current toolsets includes Vue.js/Quasar, React.js/Next Framework and all the other various libraries and technologies related to them.`}{' '}
+            {`My current toolsets includes Vue.js/Quasar, React.js/Next Framework and all the other various libraries and technologies related to them.`}
           </Text>
           <Text fontSize='lg' fontWeight='medium' mt={5}>
-            {` If you want to get in touch or talk about a project, send me a message or send an email to `}{' '}
+            {` If you want to get in touch or talk about a project, send me a message or send an email to `}
             <Link
               color='pastel.custom'
               href='mailto:renzocretecio@gmail.com?Subject=Hello'
@@ -54,7 +52,7 @@ export default function Home({ projects }) {
             </Link>
           </Text>
           <Heading as='h2' size='lg' color='slate.lighter' mt={5}>
-            {`See my works below.`}{' '}
+            {`See my works below.`}
           </Heading>
           {error ? (
             <Text mt={5}> An error occurred.Please refresh. </Text>
@@ -81,11 +79,11 @@ export default function Home({ projects }) {
               onClick={() =>
                 window.open('https://github.com/creteciorenzo', '_blank')
               }>
-              More on GitHub{' '}
-            </Button>{' '}
-          </Center>{' '}
-        </Flex>{' '}
-      </Box>{' '}
+              More on GitHub
+            </Button>
+          </Center>
+        </Flex>
+      </Box>
     </>
   )
 }

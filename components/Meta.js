@@ -2,8 +2,7 @@ import Head from 'next/head'
 const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
-      <title>{title}</title>
-      <link rel='icon' href='favicons/favicon.ico' />
+      <title> {title} </title> <link rel='icon' href='favicons/favicon.ico' />
       <link
         rel='apple-touch-icon'
         sizes='57x57'
@@ -80,16 +79,13 @@ const Meta = ({ title, keywords, description }) => {
         content='Renzo Cretecio | Frontend Developer'
       />
       <meta keywords='' content='Frontend developer' />
-
       <meta property='og:type' content='website' />
       <meta property='og:description' content={description} />
-
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:title' content={description} />
+      <meta name='twitter:title' content={description} />{' '}
       <meta name='twitter:description' content={description} />
-
-      <meta name='twitter:image:alt' content={description} />
-      <meta name='twitter:site' content='@rnzous' />
+      <meta name='twitter:image:alt' content={description} />{' '}
+      <meta name='twitter:site' content='https://creteciorenzo.vercel.app' />
       <meta name='twitter:creator' content='@rnzous' />
       <meta name='fb:page_id' content='323482201948526' />
       <meta name='author' content='Renzo R. Cretecio' />
