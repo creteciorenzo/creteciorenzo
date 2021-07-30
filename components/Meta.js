@@ -77,8 +77,16 @@ const Meta = ({ title, keywords, description }) => {
       <meta property='og:site_name' content='Renzo Cretecio' />
       <meta name='description' content={description} />
       <meta name='keywords' content='Frontend developer, Web developer' />
+      <meta
+        name='thumbnail'
+        content='https://creteciorenzo.vercel.app/thumbnail.png'
+      />
       <meta property='og:type' content='website' />
       <meta property='og:description' content={description} />
+      <meta
+        property='og:image'
+        content='https://creteciorenzo.vercel.app/thumbnail.png'
+      />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
