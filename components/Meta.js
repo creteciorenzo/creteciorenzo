@@ -73,22 +73,24 @@ const Meta = ({ title, keywords, description }) => {
         href='favicons/favicon-16x16.png'
       />
       <link rel='manifest' href='favicons/manifest.json' />
-      <meta property='og:title' content='Renzo Cretecio | Frontend Developer' />
-      <meta
-        property='og:site_name'
-        content='Renzo Cretecio | Frontend Developer'
-      />
-      <meta keywords='' content='Frontend developer' />
+      <meta property='og:title' content={title} />
+      <meta property='og:site_name' content='Renzo Cretecio' />
+      <meta name='description' content={description} />
+      <meta name='keywords' content='Frontend developer, Web developer' />
       <meta property='og:type' content='website' />
       <meta property='og:description' content={description} />
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:title' content={description} />{' '}
+      <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content={description} />
-      <meta name='twitter:image:alt' content={description} />{' '}
+      <meta
+        name='twitter:image'
+        content='https://creteciorenzo.vercel.app/thumbnail.png'
+      />
       <meta name='twitter:site' content='https://creteciorenzo.vercel.app' />
       <meta name='twitter:creator' content='@rnzous' />
       <meta name='fb:page_id' content='323482201948526' />
       <meta name='author' content='Renzo R. Cretecio' />
+      <meta name='robots' content='noindex,nofollow' />
     </Head>
   )
 }
