@@ -2,6 +2,7 @@ import Head from 'next/head'
 const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
+      <html lang='en' />
       <title> {title} </title> <link rel='icon' href='favicons/favicon.ico' />
       <link
         rel='apple-touch-icon'
