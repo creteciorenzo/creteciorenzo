@@ -98,7 +98,7 @@ const Meta = ({ title, keywords, description }) => {
       <meta name='twitter:creator' content='@rnzous' />
       <meta name='fb:page_id' content='323482201948526' />
       <meta name='author' content='Renzo R. Cretecio' />
-      <meta name='robots' content='noindex,nofollow' />
+      <meta name='robots' content='index,follow' />
     </Head>
   )
 }
