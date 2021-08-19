@@ -1,13 +1,17 @@
 import '../styles/globals.css'
 import theme from '../styles/theme'
+import Meta from '../components/Meta'
 
 import { ChakraProvider } from '@chakra-ui/react'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Meta />
+      <ChakraProvider resetCSS theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   )
 }
 

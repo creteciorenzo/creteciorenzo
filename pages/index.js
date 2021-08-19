@@ -1,5 +1,5 @@
 import Project from '../components/ProjectsCard'
-import Meta from '../components/Meta'
+
 import SkeletonLoader from '../components/SkeletonLoader'
 import useSWR from 'swr'
 
@@ -25,7 +25,6 @@ export default function Home({ projects }) {
   const { data, error } = useSWR('/users/creteciorenzo/repos', fetcher)
   return (
     <>
-      <Meta />
       <Box h='100vh'>
         <Flex
           margin='0 auto'
