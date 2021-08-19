@@ -3,7 +3,7 @@ const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
       <html lang='en' />
-      <title> {title} </title> <link rel='icon' href='favicons/favicon.ico' />
+      <title> {title} </title>
       <link
         rel='apple-touch-icon'
         sizes='57x57'
@@ -83,14 +83,20 @@ const Meta = ({ title, keywords, description }) => {
         content='https://creteciorenzo.vercel.app/thumbnail.png'
       />
       <meta property='og:type' content='website' />
-      <meta property='og:description' content={description} />
+      <meta
+        property='og:description'
+        content='Hi, I am a web development enthusiast that is armed with experience, learning, and passion.'
+      />
       <meta
         property='og:image'
         content='https://creteciorenzo.vercel.app/thumbnail.png'
       />
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={description} />
+      <meta
+        name='twitter:description'
+        content='Hi, I am a web development enthusiast that is armed with experience, learning, and passion.'
+      />
       <meta
         name='twitter:image'
         content='https://creteciorenzo.vercel.app/thumbnail.png'
