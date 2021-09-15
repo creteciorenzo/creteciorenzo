@@ -1,8 +1,7 @@
 import Project from '../components/ProjectsCard'
-
+import Meta from '../components/Meta'
 import SkeletonLoader from '../components/SkeletonLoader'
 import useSWR from 'swr'
-
 const baseURL = 'https://api.github.com/users/creteciorenzo/repos'
 import {
   Box,
@@ -15,7 +14,7 @@ import {
   Center,
   IconButton,
 } from '@chakra-ui/react'
-
+import Head from 'next/head'
 const fetcher = async () => {
   const data = await fetch(`${baseURL}`)
   return data
@@ -25,6 +24,10 @@ export default function Home({ projects }) {
   const { data, error } = useSWR('/users/creteciorenzo/repos', fetcher)
   return (
     <>
+      <Head>
+        <Meta />
+      </Head>
+
       <Box h='100vh'>
         <Flex
           margin='0 auto'
