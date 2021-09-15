@@ -25,7 +25,53 @@ export default function Home({ projects }) {
   return (
     <>
       <Head>
-        <Meta />
+        <title> Renzo Cretecio | Frontend Developer </title>
+        <meta
+          name='description'
+          content='Hi, I am a web development enthusiast that is armed with experience, learning, and passion.'></meta>
+        <meta
+          name='thumbnail'
+          content='https://creteciorenzo.vercel.app/thumbnail.png'></meta>
+        <meta
+          property='og:title'
+          content='Renzo Cretecio | Frontend Developer'
+        />
+        <meta property='og:site_name' content='Renzo Cretecio' />
+        <meta
+          name='keywords'
+          content='Frontend developer, Web developer'
+        />{' '}
+        <meta
+          name='thumbnail'
+          content='https://creteciorenzo.vercel.app/thumbnail.png'
+        />
+        <meta property='og:type' content='website' />{' '}
+        <meta
+          property='og:description'
+          content='Hi, I am a web development enthusiast that is armed with experience, learning, and passion.'
+        />
+        <meta
+          property='og:image'
+          content='https://creteciorenzo.vercel.app/thumbnail.png'
+        />
+        <meta name='twitter:card' content='summary' />
+        <meta
+          name='twitter:title'
+          content='Renzo Cretecio | Frontend Developer'
+        />
+        <meta
+          name='twitter:description'
+          content='Hi, I am a web development enthusiast that is armed with experience, learning, and passion.'
+        />
+        <meta
+          name='twitter:image'
+          content='https://creteciorenzo.vercel.app/thumbnail.png'
+        />
+        <meta name='twitter:site' content='https://creteciorenzo.vercel.app' />
+        <meta name='twitter:creator' content='@rnzous' />
+        <meta name='fb:page_id' content='323482201948526' />
+        <meta name='author' content='Renzo R. Cretecio' />
+        <meta name='robots' content='index,follow' />
       </Head>
 
       <Box h='100vh'>
