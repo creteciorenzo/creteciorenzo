@@ -72,6 +72,7 @@ export default function Home({ projects }) {
         <meta name='fb:page_id' content='323482201948526' />
         <meta name='author' content='Renzo R. Cretecio' />
         <meta name='robots' content='index,follow' />
+        <link rel='canonical' href='https://creteciorenzo.vercel.app/' />
         <link
           rel='apple-touch-icon'
           sizes='57x57'
