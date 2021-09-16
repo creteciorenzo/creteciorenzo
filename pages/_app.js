@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ChakraProvider resetCSS theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
+        <Component {...pageProps} />{' '}
+      </ChakraProvider>{' '}
     </>
   )
 }
